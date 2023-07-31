@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31919.166
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafetaria.Common.Pages", "SchoolCafetaria\Cafetaria.Common.Pages.csproj", "{2F72F366-4B69-48D6-AC66-067DECA2994B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafetaria.Common.Pages", "SchoolCafetaria\Cafetaria.Common.Pages.csproj", "{2F72F366-4B69-48D6-AC66-067DECA2994B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafetarea.Common.Library", "Cafetarea.Common.Library\Cafetarea.Common.Library.csproj", "{E7C98990-F850-403A-A1D1-766BD5784556}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafetarea.Common.Library", "Cafetarea.Common.Library\Cafetarea.Common.Library.csproj", "{E7C98990-F850-403A-A1D1-766BD5784556}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafetaria.Common.Tests", "Cafetaria.Common.Tests\Cafetaria.Common.Tests.csproj", "{C6F89107-6DE0-4121-A2F5-F4BBA04014B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafetaria.Common.Tests", "Cafetaria.Common.Tests\Cafetaria.Common.Tests.csproj", "{C6F89107-6DE0-4121-A2F5-F4BBA04014B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafetaria.Common.Helpers", "Cafetaria.Common.Interfaces\Cafetaria.Common.Helpers.csproj", "{E00351C8-F84D-41CA-B4BC-DF08368B3E9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafetaria.Common.Helpers", "Cafetaria.Common.Interfaces\Cafetaria.Common.Helpers.csproj", "{E00351C8-F84D-41CA-B4BC-DF08368B3E9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafetaria.Selenium.Library", "Cafetaria.Selenium.Library\Cafetaria.Selenium.Library.csproj", "{61820634-118F-4C5F-90BF-8DB7DAD49A20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cafetaria.Selenium.Library", "Cafetaria.Selenium.Library\Cafetaria.Selenium.Library.csproj", "{61820634-118F-4C5F-90BF-8DB7DAD49A20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
