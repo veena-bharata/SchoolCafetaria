@@ -1,7 +1,9 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +13,7 @@ namespace Cafetaria.Selenium.Library
     public static class WaitExtensions
     {
         public static TimeSpan GlobalTimeOut { get; } = TimeSpan.FromSeconds(120);
-
+        public static string ScreenshotPath { get; } = Path.GetTempPath() + @"SchoolCafe\Screenshots\";
 
         public static TimeSpan DefaultTimeToWaitForElementToExist = TimeSpan.FromSeconds(5);
         /// <summary>
@@ -99,6 +101,34 @@ namespace Cafetaria.Selenium.Library
         {
             if (driver.IsElementExists(By.ClassName("loading-spinner"), TimeSpan.FromSeconds(2)))
                 driver.WaitForCondition(() => driver.FindElements(By.ClassName("loading-spinner")).Count == 0);
+        }
+        /// <summary>
+        /// This extension method returns screen shot
+        /// </summary>
+        public static string GetScreenshot(this IWebDriver driver)
+        {
+            try
+            {
+                if (driver == null)
+                {
+                    throw new NullReferenceException("Driver object found null while taking screenshot");
+                }
+
+                string dir = ScreenshotPath;
+                if (!Directory.Exists(dir))
+                {
+                    Directory.CreateDirectory(dir);
+                }
+
+                string screenshotFile = Path.Combine(dir, TestContext.CurrentContext.Test.MethodName + new Random().Next(1000).ToString() + '_' + DateTime.Today.Date.ToString("ddMMyyyy") + ".png");
+                Screenshot file = ((ITakesScreenshot)driver).GetScreenshot();
+                file.SaveAsFile(screenshotFile, ScreenshotImageFormat.Png);
+                return screenshotFile;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
     }
