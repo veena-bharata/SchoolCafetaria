@@ -84,8 +84,7 @@ namespace Cafetaria.Common.Pages
                 isLoggedin = true;
             }
             catch (Exception ex)
-            {
-                isLoggedin = false;
+            {                isLoggedin = false;
                 //   Logger.LogFail("Some Exception occured while log in: " + ex.Message + "/n Stack Trace: " + ex.StackTrace, ExtentReport.CreateScreenCapture(_driver.GetScreenshot()));
             }
             Assert.IsTrue(isLoggedin, "User is not able to log in!");
