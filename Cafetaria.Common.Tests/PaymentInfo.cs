@@ -34,6 +34,7 @@ namespace Cafetaria.Common.Tests
         public void test1()
         {
             _PaymentInfo.ClickOnClosePopUp();
+            Console.WriteLine("Hello");
         }
     }
 }
