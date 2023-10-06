@@ -7,7 +7,7 @@ using NUnit.Framework;
 namespace Cafetaria.Common.Tests
 {
     public class PaymentInfo:BaseClass
-    {
+    {//testing
         private readonly ICommon _Common;
         private readonly IPaymentInfo _PaymentInfo;
         private readonly LoginDto systemData = TestDataHelper.ReadJsonText<LoginDto>("Login_Data.json");
